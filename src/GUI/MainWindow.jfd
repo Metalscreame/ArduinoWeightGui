@@ -1,0 +1,104 @@
+JFDML JFormDesigner: "6.0.3.0.150" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"visible": true
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq t {space :::p, comp panel2:::::x, space :::p, comp panel1:::p::p, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par l {comp panel1:::::x, comp panel2:::::x}, space :::p}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {space :::p, par l {comp button1::::201:x, comp button2::::201:x, comp button3::l::201:x}, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp button1:::p::p, space s:::p, comp button2:::p::p, space ::553:x, comp button3:::p::p, space :::p}}"
+					} ) {
+						name: "panel1"
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1"
+							"text": "text"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button2"
+							"text": "text"
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button3"
+							"text": "text"
+						} )
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:200:p, space ::763:x}}"
+						"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:200:p, space ::473:x}}"
+					} ) {
+						name: "panel2"
+						"font": new java.awt.Font( "Segoe UI", 0, 16 )
+						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+							name: "scrollPane1"
+							add( new FormComponent( "javax.swing.JTable" ) {
+								name: "DataTable1"
+								"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+									} )
+									add( new java.util.Vector {
+										add( null )
+										add( null )
+									} )
+								}, new java.util.Vector {
+									add( "Номер" )
+									add( "Значение" )
+								}, new java.util.Vector {
+									add( null )
+									add( null )
+								}, new java.util.Vector {
+									add( true )
+									add( null )
+								}, new java.util.Vector {
+									add( null )
+									add( null )
+								} )
+								"alignmentX": 1.5f
+								"rowMargin": 3
+								"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 4, false )
+							} )
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "North"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 1240, 795 )
+		} )
+	}
+}
