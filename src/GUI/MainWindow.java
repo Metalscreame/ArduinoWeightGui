@@ -4,6 +4,9 @@
 
 package GUI;
 
+import com.sun.javaws.Globals;
+import sun.applet.Main;
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.GroupLayout;
@@ -14,8 +17,87 @@ import javax.swing.table.*;
  * @author Roman Kosyiy
  */
 public class MainWindow extends JFrame {
+    public static int sensorDataCounter=1;
+
     public MainWindow() {
         initComponents();
+    }
+
+    public void SetSensorData(String dataToSet){
+        switch(sensorDataCounter){
+            case 1:
+                this.textField1.setText(dataToSet);
+                break;
+            case 2:
+                this.textField2.setText(dataToSet);
+                break;
+            case 3:
+                this.textField3.setText(dataToSet);
+                break;
+            case 4:
+                this.textField4.setText(dataToSet);
+                break;
+            case 5:
+                this.textField5.setText(dataToSet);
+                break;
+            case 6:
+                this.textField6.setText(dataToSet);
+                break;
+            case 7:
+                this.textField7.setText(dataToSet);
+                break;
+            case 8:
+                this.textField8.setText(dataToSet);
+                break;
+            case 9:
+                this.textField9.setText(dataToSet);
+                break;
+            case 10:
+                this.textField10.setText(dataToSet);
+                break;
+            case 11:
+                this.textField11.setText(dataToSet);
+                break;
+            case 12:
+                this.textField12.setText(dataToSet);
+                break;
+            case 13:
+                this.textField13.setText(dataToSet);
+                break;
+            case 14:
+                this.textField14.setText(dataToSet);
+                break;
+            case 15:
+                this.textField15.setText(dataToSet);
+                break;
+            case 16:
+                this.textField16.setText(dataToSet);
+                break;
+            case 17:
+                this.textField17.setText(dataToSet);
+                break;
+            case 18:
+                this.textField18.setText(dataToSet);
+                break;
+            case 19:
+                this.textField19.setText(dataToSet);
+                break;
+            case 20:
+                this.textField20.setText(dataToSet);
+                break;
+            case 21:
+                this.textField21.setText(dataToSet);
+                break;
+        }
+
+
+        if (sensorDataCounter >= GlobalVars.NUMBER_OF_SENSORS){
+            sensorDataCounter=1;
+        }else {
+            sensorDataCounter++;
+        }
+
+
     }
 
     private void initComponents() {
@@ -451,7 +533,7 @@ public class MainWindow extends JFrame {
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
 
-
+        setDefaultCloseOperation(this.EXIT_ON_CLOSE);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
@@ -507,3 +589,4 @@ public class MainWindow extends JFrame {
     private JTextField textField21;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
+

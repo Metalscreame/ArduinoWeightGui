@@ -1,5 +1,6 @@
 package COM;
 
+import GUI.MainWindow;
 import jssc.*;
 
 import java.io.File;
@@ -15,14 +16,17 @@ public class PortHandler extends Thread {
     private byte writeBuffer;
     private File file;
     public FileOutputStream fileStream;
+    public String strToPrint="";
+    private MainWindow winRef;
 
-    public PortHandler() throws Exception {
+    public PortHandler(MainWindow window) throws Exception {
         try {
+            this.winRef=window;
             String[] ports = SerialPortList.getPortNames();
             System.out.println(Arrays.toString(ports));
             file = new File("report.dump");
             fileStream = new FileOutputStream(file);
-            port = new SerialPort(ports[1]);
+            port = new SerialPort(ports[2]);
             port.openPort();
             port.setParams(SerialPort.BAUDRATE_9600, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
             port.setEventsMask(SerialPort.MASK_RXCHAR);
@@ -34,10 +38,6 @@ public class PortHandler extends Thread {
         } catch (ArrayIndexOutOfBoundsException e) {
             throw new ArrayIndexOutOfBoundsException();
         }
-    }
-
-    public void sciSendInt(Integer i) throws SerialPortException {
-        port.writeInt(i);
     }
 
     @Override
@@ -69,22 +69,22 @@ public class PortHandler extends Thread {
         public void serialEvent(SerialPortEvent se) {
             if (se.isRXCHAR()) {
                 try {
-                    buffer = port.readBytes();//was 21
+                    buffer = port.readBytes(21);//was 21
                     char temp;// to see whats happening while debug
 //                    fileStream.write(buffer);
                     for (byte b : buffer) {
-                        if (b == 0 || b == 1) {
-                            System.out.print(b);
-//                            JformDesign.textAreaAdd(b);
-                            // 35 is #, start marker
-                        } else {
-                            temp = (char) b;
-//                            JformDesign.textAreaAdd(temp);
-                            System.out.print(temp); // to char if text
+                        temp = (char) b;
+                        if (b==13){// 13 is '\r'
+                            winRef.SetSensorData(strToPrint);
+                            strToPrint="";
+                            continue;
                         }
+                        strToPrint+=temp;
+                        System.out.print(temp);
+
                     }
 //                    fileStream.flush();
-                } catch (SerialPortException |NullPointerException e ) {
+                } catch (SerialPortException | NullPointerException e) {
                     e.printStackTrace();
                 }
             }
