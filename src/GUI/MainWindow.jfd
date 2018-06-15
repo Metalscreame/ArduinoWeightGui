@@ -33,61 +33,157 @@ new FormModel {
 						} )
 					} )
 					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-						"$horizontalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:200:p, space ::763:x}}"
-						"$verticalGroup": "par l {seq l {space :::p, comp scrollPane1:::p:200:p, space ::473:x}}"
+						"$horizontalGroup": "par l {seq l {par t {seq t {space ::9:x, par t {seq {comp label1::::72:x, space :p:23:p, comp textField1:::p:105:p}, seq {space :0:0:x, par t:::p {seq {comp label3:::p:80:p, space u:::p, comp textField3:::p:105:p}, seq t {comp label2:::::x, space u:::p, comp textField2:::p:105:p}}}}}, seq {space ::12:x, par t {seq t {comp label4:::p:80:p, space u:::p, comp textField4:::p:105:p}, seq t {comp label5:::p:80:p, space u:::p, comp textField5:::p:105:p}, seq t {comp label6:::p:80:p, space u:::p, comp textField6:::p:105:p}, seq t {comp label7:::p:80:p, space u:::p, comp textField7:::p:105:p}}}}, space :p:78:p, par l:::p {seq l {comp label8:::p:72:p, space :23:23:p, comp textField8:::p:105:p}, seq l {space :3:3:p, par l {seq l {comp label10:::p:80:p, space :12:12:p, comp textField10:::p:105:p}, seq l {comp label11:::p:80:p, space :12:12:p, comp textField11:::p:105:p}, seq l {comp label12:::p:80:p, space :12:12:p, comp textField12:::p:105:p}, seq l {comp label13:::p:80:p, space :12:12:p, comp textField13:::p:105:p}, seq l {comp label14:::p:80:p, space :12:12:p, comp textField14:::p:105:p}}}, seq {comp label9:::::x, space :p:12:p, comp textField9:::p:105:p}}, space :p:84:p, par l:::p {seq l {comp label15:::::x, space s:::p, comp textField15:::p:105:p}, seq l {comp label16:::p:80:p, space :12:12:p, comp textField16:::p:105:p}, seq l {comp label17:::p:80:p, space :12:12:p, comp textField17:::p:105:p}, seq l {comp label18:::p:80:p, space :12:12:p, comp textField18:::p:105:p}, seq l {comp label19:::p:80:p, space :12:12:p, comp textField19:::p:105:p}, seq l {comp label20:::p:80:p, space :12:12:p, comp textField20:::p:105:p}, seq l {comp label21:::p:80:p, space :12:12:p, comp textField21:::p:105:p}}, space ::201:x}}"
+						"$verticalGroup": "par l {seq l {space :p:30:p, par l {seq {par b {comp textField15::b:p::p, comp label15::b:p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label16:::p::p}, comp textField16:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label17:::p::p}, comp textField17:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label18:::p::p}, comp textField18:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label19:::p::p}, comp textField19:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label20:::p::p}, comp textField20:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label21:::p::p}, comp textField21:::p::p}}, seq {par l {seq l {space :4:4:p, comp label8:::p::p}, comp textField8:::p::p}, space :18:18:p, par l {comp textField9:::p::p, seq {space :4:4:p, comp label9:::p::p}}, space :p:18:p, par l {seq l {space :4:4:p, comp label10:::p::p}, comp textField10:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label11:::p::p}, comp textField11:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label12:::p::p}, comp textField12:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label13:::p::p}, comp textField13:::p::p}, space :18:18:p, par l {seq l {space :4:4:p, comp label14:::p::p}, comp textField14:::p::p}}, seq {par b {comp textField1::b:p::p, comp label1::b:p::p}, space s:::p, par b {comp textField2::b:p::p, comp label2::b:p::p}, space s:::p, par b {comp textField3::b:p::p, comp label3::b:p::p}, space s:::p, par b {comp textField4::b:p::p, comp label4::b:p::p}, space s:::p, par b {comp textField5::b:p::p, comp label5::b:p::p}, space s:::p, par b {comp textField6::b:p::p, comp label6::b:p::p}, space s:::p, par b {comp textField7::b:p::p, comp label7::b:p::p}}}, space ::373:x}}"
 					} ) {
 						name: "panel2"
 						"font": new java.awt.Font( "Segoe UI", 0, 16 )
-						add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
-							name: "scrollPane1"
-							add( new FormComponent( "javax.swing.JTable" ) {
-								name: "DataTable1"
-								"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
-									add( new java.util.Vector {
-										add( null )
-										add( null )
-									} )
-									add( new java.util.Vector {
-										add( null )
-										add( null )
-									} )
-									add( new java.util.Vector {
-										add( null )
-										add( null )
-									} )
-									add( new java.util.Vector {
-										add( null )
-										add( null )
-									} )
-									add( new java.util.Vector {
-										add( null )
-										add( null )
-									} )
-									add( new java.util.Vector {
-										add( null )
-										add( null )
-									} )
-									add( new java.util.Vector {
-										add( null )
-										add( null )
-									} )
-								}, new java.util.Vector {
-									add( "Номер" )
-									add( "Значение" )
-								}, new java.util.Vector {
-									add( null )
-									add( null )
-								}, new java.util.Vector {
-									add( true )
-									add( null )
-								}, new java.util.Vector {
-									add( null )
-									add( null )
-								} )
-								"alignmentX": 1.5f
-								"rowMargin": 3
-								"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 4, false )
-							} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField1"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField3"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField4"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField5"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField6"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField7"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "Датчик 1"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label2"
+							"text": "Датчик 2"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label3"
+							"text": "Датчик 3"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label4"
+							"text": "Датчик 4"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label5"
+							"text": "Датчик 5"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label6"
+							"text": "Датчик 6"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label7"
+							"text": "Датчик 7"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label8"
+							"text": "Датчик 8"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField8"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label9"
+							"text": "Датчик 9"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField9"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label10"
+							"text": "Датчик 10"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField10"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label11"
+							"text": "Датчик 11"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField11"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label12"
+							"text": "Датчик 12"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField12"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label13"
+							"text": "Датчик 13"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField13"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label14"
+							"text": "Датчик 14"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField14"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label15"
+							"text": "Датчик 15"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField15"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label16"
+							"text": "Датчик 16"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField16"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label17"
+							"text": "Датчик 17"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField17"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label18"
+							"text": "Датчик 18"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField18"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label19"
+							"text": "Датчик 19"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField19"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label20"
+							"text": "Датчик 20"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField20"
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label21"
+							"text": "Датчик 21"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField21"
 						} )
 					} )
 				}, new FormLayoutConstraints( class java.lang.String ) {
