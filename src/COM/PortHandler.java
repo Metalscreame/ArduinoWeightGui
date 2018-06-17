@@ -22,7 +22,7 @@ public class PortHandler extends Thread {
             System.out.println(Arrays.toString(ports));
             file = new File("report.dump");
             fileStream = new FileOutputStream(file);
-            port = new SerialPort(ports[2]);// 2 for windows, 0 for linux
+            port = new SerialPort(ports[1]);
             port.openPort();
             port.setParams(SerialPort.BAUDRATE_9600, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
             port.setEventsMask(SerialPort.MASK_RXCHAR);
@@ -45,7 +45,7 @@ public class PortHandler extends Thread {
         super.run();
         try {
             while (port.isOpened()) {
-                Thread.sleep(5);//was 5
+                Thread.sleep(1);//was 5
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -69,9 +69,9 @@ public class PortHandler extends Thread {
         public void serialEvent(SerialPortEvent se) {
             if (se.isRXCHAR()) {
                 try {
-                    buffer = port.readBytes(21);//was 21
+                    buffer = port.readBytes();//was 21
                     char temp;// to see whats happening while debug
-                    fileStream.write(buffer);
+//                    fileStream.write(buffer);
                     for (byte b : buffer) {
                         if (b == 0 || b == 1) {
                             System.out.print(b);
@@ -83,8 +83,8 @@ public class PortHandler extends Thread {
                             System.out.print(temp); // to char if text
                         }
                     }
-                    fileStream.flush();
-                } catch (SerialPortException | IOException e) {
+//                    fileStream.flush();
+                } catch (SerialPortException |NullPointerException e ) {
                     e.printStackTrace();
                 }
             }
